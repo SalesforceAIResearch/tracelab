@@ -1,0 +1,6 @@
+{"refresh": 10, "seed": 1, "success": 1.0, "steps": 68, "cache_read": 72514, "cache_write": 145818, "cost": 0.611, "refreshes": 6}
+{"refresh": 10, "seed": 2, "success": 1.0, "steps": 68, "cache_read": 85109, "cache_write": 132051, "cost": 0.5644, "refreshes": 6}
+{"refresh": 10, "seed": 3, "success": 1.0, "steps": 72, "cache_read": 86080, "cache_write": 148316, "cost": 0.6406, "refreshes": 7}
+{"refresh": 20, "seed": 1, "success": 1.0, "steps": 69, "cache_read": 144986, "cache_write": 127354, "cost": 0.5651, "refreshes": 3}
+{"refresh": 20, "seed": 2, "success": 1.0, "steps": 68, "cache_read": 143778, "cache_write": 121172, "cost": 0.5412, "refreshes": 3}
+{"refresh": 20, "seed": 3, "success": 1.0, "steps": 67, "cache_read": 138763, "cache_write": 121437, "cost": 0.5431, "refreshes": 3}

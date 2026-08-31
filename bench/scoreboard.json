@@ -1,0 +1,3324 @@
+{
+  "DETECT": {
+    "n_traces": 30,
+    "per_kind": {
+      "loop": {
+        "tp": 13,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "mean_lead_events": 6.0
+      },
+      "error_streak": {
+        "tp": 12,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "mean_lead_events": 5.0
+      },
+      "tool_flood": {
+        "tp": 11,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "mean_lead_events": 193.45454545454547
+      },
+      "stall": {
+        "tp": 12,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "mean_lead_events": 1.0
+      }
+    },
+    "clean_trace_false_positives": 0
+  },
+  "FIDELITY": {
+    "overall": 1.0,
+    "per_field": {
+      "per_tool": 1.0,
+      "n_tool_calls": 1.0,
+      "n_tool_errors": 1.0,
+      "n_turns": 1.0,
+      "output_tokens": 1.0,
+      "cache_read": 1.0,
+      "n_files": 1.0,
+      "n_dangling": 1.0
+    },
+    "mismatches": []
+  },
+  "COMPREHEND": {
+    "n_transcripts": 3,
+    "n_questions": 18,
+    "model": "claude-sonnet-5",
+    "conditions": {
+      "raw": {
+        "accuracy": 0.3467,
+        "input_tokens": 176096,
+        "cost_usd": 0.5369,
+        "per_question": {
+          "latest_ask": 1.0,
+          "n_turns": 0.0,
+          "top_tool": 0.333,
+          "files": 0.08,
+          "last_error": 0.0,
+          "dangling": 0.667
+        }
+      },
+      "flatlog": {
+        "accuracy": 0.6231,
+        "input_tokens": 139661,
+        "cost_usd": 0.4874,
+        "per_question": {
+          "latest_ask": 1.0,
+          "n_turns": 0.0,
+          "top_tool": 1.0,
+          "files": 0.739,
+          "last_error": 0.333,
+          "dangling": 0.667
+        }
+      },
+      "view": {
+        "accuracy": 0.8889,
+        "input_tokens": 19474,
+        "cost_usd": 0.159,
+        "per_question": {
+          "latest_ask": 1.0,
+          "n_turns": 0.667,
+          "top_tool": 1.0,
+          "files": 1.0,
+          "last_error": 0.667,
+          "dangling": 1.0
+        }
+      }
+    }
+  },
+  "CONTINUE": {
+    "n_runs": 12,
+    "model": "claude-sonnet-5",
+    "per_policy": {
+      "full": {
+        "success": 1.0,
+        "done_rate": 1.0,
+        "mean_steps": 10.2,
+        "mean_repeated": 0.0,
+        "parse_failures": 0,
+        "input_tokens": 68066,
+        "cost_usd": 0.232
+      },
+      "mask": {
+        "success": 0.768,
+        "done_rate": 1.0,
+        "mean_steps": 23.5,
+        "mean_repeated": 13.0,
+        "parse_failures": 0,
+        "input_tokens": 228187,
+        "cost_usd": 0.743
+      },
+      "trace": {
+        "success": 0.5,
+        "done_rate": 0.0,
+        "mean_steps": 45.0,
+        "mean_repeated": 36.0,
+        "parse_failures": 0,
+        "input_tokens": 366989,
+        "cost_usd": 1.235
+      }
+    }
+  },
+  "CONTINUE_v1": {
+    "n_runs": 30,
+    "model": "claude-sonnet-5",
+    "note": "corrected protocol: pre-committed error schedule, retry/repeat split, parse-failures recorded, trace-view file-tracking + detectors + finalize fixed; n=10 per policy \u2014 directional, not significance-tested",
+    "per_policy": {
+      "full": {
+        "success": 1.0,
+        "done_rate": 1.0,
+        "mean_tool_steps": 11.5,
+        "mean_repeated": 0.0,
+        "mean_retries": 0.6,
+        "mean_errors_injected": 0.6,
+        "mean_parse_failures": 0.0,
+        "input_tokens": 208048,
+        "cost_usd": 0.702
+      },
+      "mask": {
+        "success": 0.6,
+        "done_rate": 0.5,
+        "mean_tool_steps": 32.0,
+        "mean_repeated": 19.5,
+        "mean_retries": 2.0,
+        "mean_errors_injected": 2.0,
+        "mean_parse_failures": 0.0,
+        "input_tokens": 875638,
+        "cost_usd": 2.84
+      },
+      "trace": {
+        "success": 0.575,
+        "done_rate": 0.5,
+        "mean_tool_steps": 39.3,
+        "mean_repeated": 26.6,
+        "mean_retries": 2.6,
+        "mean_errors_injected": 2.7,
+        "mean_parse_failures": 0.0,
+        "input_tokens": 878652,
+        "cost_usd": 3.023
+      }
+    }
+  },
+  "CONTINUE_v2_regime": {
+    "n_runs": 8,
+    "model": "claude-sonnet-5",
+    "note": "rot-regime: 16 values, pad=600, 80-step cap; n=3/policy \u2014 directional only",
+    "per_policy": {
+      "full": {
+        "success": 1.0,
+        "done_rate": 1.0,
+        "mean_tool_steps": 20.5,
+        "input_tokens": 656596,
+        "cost_usd": 1.993
+      },
+      "mask": {
+        "success": 1.0,
+        "done_rate": 1.0,
+        "mean_tool_steps": 12.7,
+        "input_tokens": 255498,
+        "cost_usd": 0.794
+      },
+      "trace": {
+        "success": 0.667,
+        "done_rate": 0.667,
+        "mean_tool_steps": 29.7,
+        "input_tokens": 766140,
+        "cost_usd": 2.384
+      }
+    }
+  },
+  "CONTINUE_v3_tracefacts": {
+    "n_runs": 5,
+    "model": "claude-sonnet-5",
+    "note": "trace policy WITH fact-pinning view, scatter seeds 1-5; paired baseline = CONTINUE_v1 trace on scatter (success 0.20, 4/5 hit step cap)",
+    "success": 1.0,
+    "done_rate": 1.0,
+    "mean_tool_steps": 10.8,
+    "input_tokens": 109972,
+    "cost_usd": 0.358,
+    "fix_success": 1.0,
+    "fix_mean_tool_steps": 29.6,
+    "fix_done_rate": 1.0
+  },
+  "CONTINUE_v4_chain": {
+    "n_runs": 9,
+    "model": "claude-sonnet-5",
+    "note": "shortcut-proof sequential chain (30 links, search disabled), n=3/policy \u2014 the genuine long-horizon memory regime; trace arm includes fact pinning",
+    "per_policy": {
+      "full": {
+        "success": 1.0,
+        "done_rate": 1.0,
+        "mean_tool_steps": 35.3,
+        "input_tokens": 447933,
+        "cost_usd": 1.421
+      },
+      "mask": {
+        "success": 0.0,
+        "done_rate": 0.0,
+        "mean_tool_steps": 60.0,
+        "input_tokens": 502757,
+        "cost_usd": 1.709
+      },
+      "trace": {
+        "success": 0.0,
+        "done_rate": 0.667,
+        "mean_tool_steps": 48.3,
+        "input_tokens": 296399,
+        "cost_usd": 1.083
+      }
+    }
+  },
+  "CONTINUE_v5_chain_scopedfacts": {
+    "n_runs": 3,
+    "model": "claude-sonnet-5",
+    "note": "chain-30 with collision-versioned fact keys (v4 lesson); baseline: v4 trace 0.0, v4 full 1.0 @ ~150K tok/run",
+    "success": 0.0,
+    "done_rate": 1.0,
+    "mean_tool_steps": 46.3,
+    "input_tokens": 333256,
+    "cost_usd": 1.131
+  },
+  "CONTINUE_v6_chain_fullfacts": {
+    "n_runs": 3,
+    "model": "claude-sonnet-5",
+    "note": "chain-30, scoped facts + UNTRUNCATED fact rendering. Baselines: v4 trace 0.0 (newest-wins collapse), v5 trace 0.0 (render truncation), v4 full 1.0.",
+    "success": 0.0,
+    "done_rate": 1.0,
+    "mean_tool_steps": 36.0,
+    "input_tokens": 250770,
+    "cost_usd": 0.834
+  },
+  "CONTINUE_v7_chain_sourcefacts": {
+    "n_runs": 3,
+    "model": "claude-sonnet-5",
+    "note": "chain-30: source-scoped fact identity + untruncated rendering. Ablation chain: v4 0.0 (newest-wins) -> v5 0.0 (render cap) -> v6 0.0 (value-merge) -> v7. Reference: v4 full = 1.0 @ ~150K tok/run.",
+    "success": 0.667,
+    "done_rate": 1.0,
+    "mean_tool_steps": 35.7,
+    "input_tokens": 274556,
+    "cost_usd": 0.891
+  },
+  "CONTINUE_v8_chain_grouped": {
+    "n_runs": 5,
+    "model": "claude-sonnet-5",
+    "note": "chain-30, source-scoped facts + GROUPED-by-key rendering (n=5). Arc: v4 0.0 -> v7 0.667 -> v8. Reference: full 1.0 @ ~$0.47/run.",
+    "success": 0.6,
+    "done_rate": 1.0,
+    "mean_tool_steps": 37.8,
+    "input_tokens": 494022,
+    "cost_usd": 1.689
+  },
+  "CONTINUE_v9_chain_aggregates": {
+    "n_runs": 5,
+    "model": "claude-sonnet-5",
+    "note": "chain-30: + deterministic per-key running aggregates in the view (requirement 5: the trace model does the arithmetic). Arc: v4 0.0 -> v7 0.667 -> v8 0.6 (arithmetic slips) -> v9. Reference: full 1.0 @ $0.47/run.",
+    "success": 1.0,
+    "done_rate": 1.0,
+    "mean_tool_steps": 35.6,
+    "input_tokens": 459731,
+    "cost_usd": 1.467
+  },
+  "CONTINUE_v10_scaling": {
+    "n_runs": 18,
+    "model": "claude-sonnet-5",
+    "note": "crossover curve: chain length 30/60/120, full vs curated-v9 view, n=3/cell. Claim under test: full cost grows ~linearly with horizon; view stays bounded at equal success.",
+    "cells": {
+      "full@30": {
+        "success": 1.0,
+        "mean_in_tok": 149311,
+        "mean_cost": 0.473
+      },
+      "trace@30": {
+        "success": 1.0,
+        "mean_in_tok": 91106,
+        "mean_cost": 0.291
+      },
+      "full@60": {
+        "success": 0.0,
+        "mean_in_tok": 633854,
+        "mean_cost": 2.026
+      },
+      "trace@60": {
+        "success": 1.0,
+        "mean_in_tok": 235250,
+        "mean_cost": 0.739
+      },
+      "full@120": {
+        "success": 0.333,
+        "mean_in_tok": 2368366,
+        "mean_cost": 7.505
+      },
+      "trace@120": {
+        "success": 0.0,
+        "mean_in_tok": 608878,
+        "mean_cost": 1.903
+      }
+    }
+  },
+  "CONTINUE_v11_lossless_eviction": {
+    "n_runs": 6,
+    "model": "claude-sonnet-5",
+    "note": "chain 60/120 with LOSSLESS numeric eviction (evicted facts fold into persistent aggregates). v10 baselines: trace@120 0.0 (cap eviction), full@60 0.0 / full@120 0.333 (rot) at 3-4x the cost.",
+    "cells": {
+      "trace_v11@60": {
+        "success": 1.0,
+        "mean_in_tok": 235786,
+        "mean_cost": 0.741
+      },
+      "trace_v11@120": {
+        "success": 0.667,
+        "mean_in_tok": 608018,
+        "mean_cost": 1.898
+      }
+    }
+  },
+  "CONTINUE_v12_chain120_final": {
+    "n_runs": 3,
+    "model": "claude-sonnet-5",
+    "note": "chain-120 with re-read double-count guard. Ladder: v10 trace@120 0.0 (cap eviction) -> v11 0.x (double count) -> v12. Reference full@120: 0.333 @ $7.50.",
+    "success": 1.0,
+    "mean_in_tok": 608017,
+    "mean_cost": 1.898
+  },
+  "CONTINUE_v13_cache_chain60_conversational": {
+    "arms": {
+      "full": {
+        "success": 0.3333333333333333,
+        "cost": 0.3744,
+        "cache_read": 500795.6666666667,
+        "cache_write": 40911.333333333336,
+        "uncached_in": 2822.6666666666665
+      },
+      "trace": {
+        "success": 1.0,
+        "cost": 0.6575333333333333,
+        "cache_read": 45915.0,
+        "cache_write": 157674.0,
+        "uncached_in": 3271.3333333333335
+      }
+    }
+  },
+  "CONTINUE_v13b_refresh_dial_chain60": {
+    "refresh_10": {
+      "success": 1.0,
+      "cost": 0.6053,
+      "cache_write": 142061,
+      "cache_read": 81234
+    },
+    "refresh_20": {
+      "success": 1.0,
+      "cost": 0.5498,
+      "cache_write": 123321,
+      "cache_read": 142509
+    }
+  },
+  "COMPREHEND_v1_sonnet": {
+    "n_transcripts": 12,
+    "n_questions": 70,
+    "model": "claude-sonnet-5",
+    "conditions": {
+      "raw": {
+        "accuracy": 0.4787,
+        "input_tokens": 778555,
+        "cost_usd": 2.3677,
+        "per_question": {
+          "latest_ask": 0.833,
+          "n_turns": 0.167,
+          "top_tool": 0.5,
+          "files": 0.126,
+          "last_error": 0.3,
+          "dangling": 0.917
+        }
+      },
+      "flatlog": {
+        "accuracy": 0.6209,
+        "input_tokens": 478981,
+        "cost_usd": 1.5936,
+        "per_question": {
+          "latest_ask": 0.75,
+          "n_turns": 0.0,
+          "top_tool": 0.917,
+          "files": 0.705,
+          "last_error": 0.4,
+          "dangling": 0.917
+        }
+      },
+      "view": {
+        "accuracy": 0.8714,
+        "input_tokens": 56583,
+        "cost_usd": 0.4249,
+        "per_question": {
+          "latest_ask": 1.0,
+          "n_turns": 0.75,
+          "top_tool": 1.0,
+          "files": 1.0,
+          "last_error": 0.5,
+          "dangling": 0.917
+        }
+      }
+    }
+  },
+  "COMPREHEND_v1_haiku": {
+    "n_transcripts": 12,
+    "n_questions": 70,
+    "model": "claude-haiku-4-5@20251001",
+    "conditions": {
+      "raw": {
+        "accuracy": 0.4764,
+        "input_tokens": 651637,
+        "cost_usd": 0.5286,
+        "per_question": {
+          "latest_ask": 0.833,
+          "n_turns": 0.167,
+          "top_tool": 0.417,
+          "files": 0.195,
+          "last_error": 0.3,
+          "dangling": 0.917
+        }
+      },
+      "flatlog": {
+        "accuracy": 0.522,
+        "input_tokens": 372042,
+        "cost_usd": 0.3198,
+        "per_question": {
+          "latest_ask": 0.583,
+          "n_turns": 0.083,
+          "top_tool": 0.75,
+          "files": 0.545,
+          "last_error": 0.2,
+          "dangling": 0.917
+        }
+      },
+      "view": {
+        "accuracy": 0.8498,
+        "input_tokens": 42563,
+        "cost_usd": 0.0814,
+        "per_question": {
+          "latest_ask": 0.917,
+          "n_turns": 1.0,
+          "top_tool": 1.0,
+          "files": 0.957,
+          "last_error": 0.2,
+          "dangling": 0.917
+        }
+      }
+    }
+  },
+  "CONTINUE_v14_budget_dial_prosechain60": {
+    "full": {
+      "success": 0.3333333333333333,
+      "cost": 2.2896,
+      "curator_cost": 0.0
+    },
+    "trace-det": {
+      "success": 0.0,
+      "cost": 0.6157,
+      "curator_cost": 0.0
+    },
+    "trace-haiku": {
+      "success": 0.6666666666666666,
+      "cost": 0.9014,
+      "curator_cost": 0.0242
+    },
+    "trace-sonnet": {
+      "success": 0.0,
+      "cost": 0.7048,
+      "curator_cost": 0.0663
+    }
+  },
+  "CONTINUE_v15_anchored_extraction_prosechain60": {
+    "trace-haiku": {
+      "success": 1.0,
+      "cost": 0.7808,
+      "curator_cost": 0.0231
+    },
+    "trace-sonnet": {
+      "success": 0.0,
+      "cost": 0.6214,
+      "curator_cost": 0.0661
+    }
+  },
+  "CONTINUE_v16_sonnet_bisect_prosechain60": {
+    "success": 0.3333333333333333,
+    "cost": 0.7646,
+    "curator_cost": 0.2352,
+    "refusals": 112
+  },
+  "CONTINUE_v17_sonnet_cascade_prosechain60": {
+    "success": 0.6666666666666666,
+    "cost": 0.7817,
+    "curator_cost": 0.2307,
+    "refusals": 109,
+    "fallbacks": 10
+  },
+  "CONTINUE_v18_sonnet_validated_prosechain60": {
+    "success": 0.6666666666666666,
+    "cost": 0.7759,
+    "curator_cost": 0.2381,
+    "refusals": 114,
+    "fallbacks": 10
+  },
+  "CONTINUE_v19_haiku_prosechain120": {
+    "success": 1.0,
+    "cost": 1.9802,
+    "curator_cost": 0.0458
+  },
+  "CONTINUE_v20_summary_baseline": {
+    "chain30": {
+      "success": 0.0,
+      "cost": 0.2894,
+      "summarizer_cost": 0.1431
+    },
+    "chain60": {
+      "success": 0.0,
+      "cost": 0.5535,
+      "summarizer_cost": 0.2695
+    }
+  },
+  "CONTINUE_v13a_naive_cache": {
+    "note": "naive single-block cache_control breakpoint on a rebuilt prefix, chain-60 seed 1 only (run killed after diagnosis): ZERO cache reads - the block's content grows every step so lookup never matches; writes at 1.25x made it cost MORE than uncached ($2.06 vs $2.03, v10 full@60).",
+    "success": 1.0,
+    "cost": 2.06,
+    "cache_read": 0,
+    "cache_write": 512521,
+    "n": 1,
+    "log": "continue_v13a_naive.log"
+  },
+  "TAU2_retail_ctx_external": {
+    "note": "tau2-bench retail, sonnet-5 agent, gpt-5.5 user-sim. Baseline llm_agent (round-1, merged latest non-infra per task, 1 trial): pass1=0.80, ~85.2K prompt tok/sim. Curated llm_agent_ctx 4 trials x 20 tasks (80 sims): pass1=0.8125, pass4=0.60, ~85.5K tok/sim. PARITY at equal tokens; trial-1 read 0.95 (+0.15) which 4 trials erased - single-trial tau2 comparisons are noise at this effect size. UPDATE Aug 19: symmetric 4-trial baseline run: 41/53 non-infra sims = 0.774.",
+    "baseline_pass1_1trial": 0.8,
+    "ctx_pass1_4trial": 0.8125,
+    "ctx_pass4": 0.6,
+    "ctx_sims": 80,
+    "results_dir": "20260818_090148_retail_llm_agent_ctx_claude-sonnet-5_user_simulator_gpt-5.5",
+    "baseline_pass1_4trial_symmetric": 0.7736
+  },
+  "CONTINUE_v23_nscale_trace_60": {
+    "n_new": 7,
+    "success_new": 0.7142857142857143,
+    "cost_new": 0.7454,
+    "cells": [
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 0.7629
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 0.7375
+      },
+      {
+        "seed": 6,
+        "success": 0.0,
+        "cost": 0.7736
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 0.743
+      },
+      {
+        "seed": 11,
+        "success": 1.0,
+        "cost": 0.7193
+      },
+      {
+        "seed": 12,
+        "success": 0.0,
+        "cost": 0.7118
+      },
+      {
+        "seed": 13,
+        "success": 1.0,
+        "cost": 0.7698
+      }
+    ]
+  },
+  "v21_full_scratchpad_chain60": {
+    "success": 1.0,
+    "cost": 1.8377,
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "steps": 67,
+        "cost": 1.8334
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "steps": 67,
+        "cost": 1.854
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "steps": 67,
+        "cost": 1.8257
+      }
+    ]
+  },
+  "v22_heldout_curated_chain60": {
+    "success": 1.0,
+    "cost": 0.7652,
+    "cells": [
+      {
+        "seed": 7,
+        "success": 1.0,
+        "cost": 0.7896
+      },
+      {
+        "seed": 8,
+        "success": 1.0,
+        "cost": 0.7326
+      },
+      {
+        "seed": 9,
+        "success": 1.0,
+        "cost": 0.7734
+      }
+    ]
+  },
+  "v22_heldout_curated_chain120": {
+    "success": 0.6666666666666666,
+    "cost": 1.9293,
+    "cells": [
+      {
+        "seed": 7,
+        "success": 1.0,
+        "cost": 1.9042
+      },
+      {
+        "seed": 8,
+        "success": 0.0,
+        "cost": 1.9656
+      },
+      {
+        "seed": 9,
+        "success": 1.0,
+        "cost": 1.9181
+      }
+    ]
+  },
+  "CONTINUE_v23_nscale_full_60": {
+    "n_new": 7,
+    "success_new": 0.8571428571428571,
+    "cost_new": 1.7288,
+    "cells": [
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 1.7226
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 1.6533
+      },
+      {
+        "seed": 6,
+        "success": 1.0,
+        "cost": 1.9438
+      },
+      {
+        "seed": 10,
+        "success": 0.0,
+        "cost": 1.7385
+      },
+      {
+        "seed": 11,
+        "success": 1.0,
+        "cost": 1.6469
+      },
+      {
+        "seed": 12,
+        "success": 1.0,
+        "cost": 1.6139
+      },
+      {
+        "seed": 13,
+        "success": 1.0,
+        "cost": 1.7827
+      }
+    ]
+  },
+  "CONTINUE_v23_nscale_trace_30": {
+    "n_new": 7,
+    "success_new": 1.0,
+    "cost_new": 0.2932,
+    "cells": [
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 0.3091
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 0.2875
+      },
+      {
+        "seed": 6,
+        "success": 1.0,
+        "cost": 0.3225
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 0.2886
+      },
+      {
+        "seed": 11,
+        "success": 1.0,
+        "cost": 0.2784
+      },
+      {
+        "seed": 12,
+        "success": 1.0,
+        "cost": 0.286
+      },
+      {
+        "seed": 13,
+        "success": 1.0,
+        "cost": 0.2805
+      }
+    ]
+  },
+  "CONTINUE_v23_nscale_full_30": {
+    "n_new": 7,
+    "success_new": 1.0,
+    "cost_new": 0.4796,
+    "cells": [
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 0.5216
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 0.4632
+      },
+      {
+        "seed": 6,
+        "success": 1.0,
+        "cost": 0.5454
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 0.4721
+      },
+      {
+        "seed": 11,
+        "success": 1.0,
+        "cost": 0.452
+      },
+      {
+        "seed": 12,
+        "success": 1.0,
+        "cost": 0.4595
+      },
+      {
+        "seed": 13,
+        "success": 1.0,
+        "cost": 0.4432
+      }
+    ]
+  },
+  "CONTINUE_v24_missing_baselines": {
+    "mask_chain60": {
+      "success": 0.0,
+      "cost": 0.9267,
+      "cells": [
+        {
+          "seed": 1,
+          "success": 0.0,
+          "cost": 0.9259
+        },
+        {
+          "seed": 2,
+          "success": 0.0,
+          "cost": 0.9158
+        },
+        {
+          "seed": 3,
+          "success": 0.0,
+          "cost": 0.9385
+        }
+      ]
+    },
+    "convfull_chain120": {
+      "success": 0.0,
+      "cost": 1.1048,
+      "cells": [
+        {
+          "seed": 1,
+          "success": 0.0,
+          "cost": 1.0825
+        },
+        {
+          "seed": 2,
+          "success": 0.0,
+          "cost": 1.0304
+        },
+        {
+          "seed": 3,
+          "success": 0.0,
+          "cost": 1.2014
+        }
+      ]
+    },
+    "scratchpad_chain120": {
+      "success": 1.0,
+      "cost": 6.9366,
+      "cells": [
+        {
+          "seed": 1,
+          "success": 1.0,
+          "cost": 6.7932
+        },
+        {
+          "seed": 2,
+          "success": 1.0,
+          "cost": 7.0295
+        },
+        {
+          "seed": 3,
+          "success": 1.0,
+          "cost": 6.9872
+        }
+      ]
+    }
+  },
+  "CONTINUE_v23_nscale_trace_120": {
+    "n_new": 7,
+    "success_new": 0.8571428571428571,
+    "cost_new": 1.9265,
+    "cells": [
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 1.9501
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 1.9213
+      },
+      {
+        "seed": 6,
+        "success": 1.0,
+        "cost": 1.9864
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 1.9496
+      },
+      {
+        "seed": 11,
+        "success": 0.0,
+        "cost": 1.8324
+      },
+      {
+        "seed": 12,
+        "success": 1.0,
+        "cost": 1.9302
+      },
+      {
+        "seed": 13,
+        "success": 1.0,
+        "cost": 1.9154
+      }
+    ]
+  },
+  "CONTINUE_v23_nscale_full_120": {
+    "n_new": 7,
+    "success_new": 0.2857142857142857,
+    "cost_new": 7.5036,
+    "cells": [
+      {
+        "seed": 4,
+        "success": 0.0,
+        "cost": 7.7555
+      },
+      {
+        "seed": 5,
+        "success": 0.0,
+        "cost": 7.7501
+      },
+      {
+        "seed": 6,
+        "success": 0.0,
+        "cost": 7.6085
+      },
+      {
+        "seed": 10,
+        "success": 0.0,
+        "cost": 7.7763
+      },
+      {
+        "seed": 11,
+        "success": 1.0,
+        "cost": 6.9616
+      },
+      {
+        "seed": 12,
+        "success": 0.0,
+        "cost": 7.9469
+      },
+      {
+        "seed": 13,
+        "success": 1.0,
+        "cost": 6.7266
+      }
+    ]
+  },
+  "CONTINUE_v25_scratchpad_cached_120": {
+    "success": 1.0,
+    "cost": 1.1027,
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 1.1967,
+        "cache_read": 2539920
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 1.0517,
+        "cache_read": 2316812
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 1.0597,
+        "cache_read": 2313318
+      }
+    ]
+  },
+  "COMPREHEND_v2_synth_sonnet": {
+    "n_transcripts": 12,
+    "n_questions": 72,
+    "model": "claude-sonnet-5",
+    "conditions": {
+      "raw": {
+        "accuracy": 0.6731,
+        "input_tokens": 393206,
+        "cost_usd": 1.2216,
+        "per_question": {
+          "latest_ask": 1.0,
+          "n_turns": 0.0,
+          "top_tool": 0.75,
+          "files": 0.789,
+          "last_error": 1.0,
+          "dangling": 0.5
+        }
+      },
+      "flatlog": {
+        "accuracy": 0.7216,
+        "input_tokens": 226600,
+        "cost_usd": 0.7365,
+        "per_question": {
+          "latest_ask": 1.0,
+          "n_turns": 0.167,
+          "top_tool": 1.0,
+          "files": 0.996,
+          "last_error": 0.667,
+          "dangling": 0.5
+        }
+      },
+      "view": {
+        "accuracy": 1.0,
+        "input_tokens": 31221,
+        "cost_usd": 0.1512,
+        "per_question": {
+          "latest_ask": 1.0,
+          "n_turns": 1.0,
+          "top_tool": 1.0,
+          "files": 1.0,
+          "last_error": 1.0,
+          "dangling": 1.0
+        }
+      }
+    }
+  },
+  "COMPREHEND_v2_synth_haiku": {
+    "n_transcripts": 12,
+    "n_questions": 72,
+    "model": "claude-haiku-4-5@20251001",
+    "conditions": {
+      "raw": {
+        "accuracy": 0.6001,
+        "input_tokens": 210133,
+        "cost_usd": 0.1768,
+        "per_question": {
+          "latest_ask": 1.0,
+          "n_turns": 0.0,
+          "top_tool": 0.583,
+          "files": 0.684,
+          "last_error": 1.0,
+          "dangling": 0.333
+        }
+      },
+      "flatlog": {
+        "accuracy": 0.6383,
+        "input_tokens": 140770,
+        "cost_usd": 0.1245,
+        "per_question": {
+          "latest_ask": 0.917,
+          "n_turns": 0.083,
+          "top_tool": 0.667,
+          "files": 0.996,
+          "last_error": 0.833,
+          "dangling": 0.333
+        }
+      },
+      "view": {
+        "accuracy": 0.9444,
+        "input_tokens": 23095,
+        "cost_usd": 0.0305,
+        "per_question": {
+          "latest_ask": 1.0,
+          "n_turns": 1.0,
+          "top_tool": 1.0,
+          "files": 1.0,
+          "last_error": 0.667,
+          "dangling": 1.0
+        }
+      }
+    }
+  },
+  "CONTINUE_v26_n30_trace_120": {
+    "cells": [
+      {
+        "seed": 14,
+        "success": 1.0,
+        "cost": 1.8982
+      },
+      {
+        "seed": 15,
+        "success": 1.0,
+        "cost": 1.8738
+      },
+      {
+        "seed": 16,
+        "success": 1.0,
+        "cost": 1.9437
+      },
+      {
+        "seed": 17,
+        "success": 1.0,
+        "cost": 1.9605
+      },
+      {
+        "seed": 18,
+        "success": 1.0,
+        "cost": 1.8834
+      },
+      {
+        "seed": 19,
+        "success": 1.0,
+        "cost": 2.0268
+      },
+      {
+        "seed": 20,
+        "success": 0.0,
+        "cost": 1.9717
+      },
+      {
+        "seed": 21,
+        "success": 1.0,
+        "cost": 1.9612
+      },
+      {
+        "seed": 22,
+        "success": 1.0,
+        "cost": 1.8865
+      },
+      {
+        "seed": 23,
+        "success": 1.0,
+        "cost": 1.9609
+      },
+      {
+        "seed": 24,
+        "success": 1.0,
+        "cost": 1.8949
+      },
+      {
+        "seed": 25,
+        "success": 1.0,
+        "cost": 1.9378
+      },
+      {
+        "seed": 26,
+        "success": 1.0,
+        "cost": 1.9375
+      },
+      {
+        "seed": 27,
+        "success": 1.0,
+        "cost": 1.9694
+      },
+      {
+        "seed": 28,
+        "success": 1.0,
+        "cost": 1.9028
+      },
+      {
+        "seed": 29,
+        "success": 0.0,
+        "cost": 1.9606
+      },
+      {
+        "seed": 30,
+        "success": 1.0,
+        "cost": 1.9701
+      },
+      {
+        "seed": 31,
+        "success": 0.0,
+        "cost": 1.8959
+      },
+      {
+        "seed": 32,
+        "success": 1.0,
+        "cost": 1.9228
+      },
+      {
+        "seed": 33,
+        "success": 0.0,
+        "cost": 1.9557
+      }
+    ],
+    "k": 16,
+    "n": 20
+  },
+  "CONTINUE_v27_altchain_trace_60": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 1.2569
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 0.9116
+      },
+      {
+        "seed": 3,
+        "success": 0.0,
+        "cost": 1.3033
+      },
+      {
+        "seed": 4,
+        "success": 0.0,
+        "cost": 1.3067
+      },
+      {
+        "seed": 5,
+        "success": 0.0,
+        "cost": 1.2712
+      },
+      {
+        "seed": 6,
+        "success": 0.0,
+        "cost": 1.2533
+      },
+      {
+        "seed": 7,
+        "success": 0.0,
+        "cost": 1.2512
+      },
+      {
+        "seed": 8,
+        "success": 0.0,
+        "cost": 1.2531
+      },
+      {
+        "seed": 9,
+        "success": 1.0,
+        "cost": 1.234
+      },
+      {
+        "seed": 10,
+        "success": 0.0,
+        "cost": 1.2954
+      }
+    ],
+    "k": 3,
+    "n": 10
+  },
+  "CONTINUE_v27_altchain_trace_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 0.0,
+        "cost": 2.4285
+      },
+      {
+        "seed": 2,
+        "success": 0.0,
+        "cost": 2.5939
+      },
+      {
+        "seed": 3,
+        "success": 0.0,
+        "cost": 2.4911
+      },
+      {
+        "seed": 4,
+        "success": 0.0,
+        "cost": 2.4023
+      },
+      {
+        "seed": 5,
+        "success": 0.0,
+        "cost": 2.5916
+      },
+      {
+        "seed": 6,
+        "success": 0.0,
+        "cost": 2.4578
+      },
+      {
+        "seed": 7,
+        "success": 0.0,
+        "cost": 2.6384
+      },
+      {
+        "seed": 8,
+        "success": 0.0,
+        "cost": 2.418
+      },
+      {
+        "seed": 9,
+        "success": 0.0,
+        "cost": 2.4699
+      },
+      {
+        "seed": 10,
+        "success": 0.0,
+        "cost": 2.3979
+      }
+    ],
+    "k": 0,
+    "n": 10
+  },
+  "CONTINUE_v26_n30_full_120": {
+    "cells": [
+      {
+        "seed": 14,
+        "success": 0.0,
+        "cost": 7.7609
+      },
+      {
+        "seed": 15,
+        "success": 1.0,
+        "cost": 8.0059
+      },
+      {
+        "seed": 16,
+        "success": 0.0,
+        "cost": 7.3192
+      },
+      {
+        "seed": 17,
+        "success": 1.0,
+        "cost": 7.2514
+      },
+      {
+        "seed": 18,
+        "success": 0.0,
+        "cost": 7.3015
+      },
+      {
+        "seed": 19,
+        "success": 1.0,
+        "cost": 7.3841
+      },
+      {
+        "seed": 20,
+        "success": 0.0,
+        "cost": 7.8448
+      },
+      {
+        "seed": 21,
+        "success": 0.0,
+        "cost": 7.6002
+      },
+      {
+        "seed": 22,
+        "success": 0.0,
+        "cost": 6.549
+      },
+      {
+        "seed": 23,
+        "success": 0.0,
+        "cost": 7.7991
+      },
+      {
+        "seed": 24,
+        "success": 0.0,
+        "cost": 7.9207
+      },
+      {
+        "seed": 25,
+        "success": 0.0,
+        "cost": 6.8753
+      },
+      {
+        "seed": 26,
+        "success": 0.0,
+        "cost": 6.5238
+      },
+      {
+        "seed": 27,
+        "success": 0.0,
+        "cost": 7.6861
+      },
+      {
+        "seed": 28,
+        "success": 1.0,
+        "cost": 7.5269
+      },
+      {
+        "seed": 29,
+        "success": 0.8166666666666667,
+        "cost": 7.7034
+      },
+      {
+        "seed": 30,
+        "success": 0.0,
+        "cost": 7.6884
+      },
+      {
+        "seed": 31,
+        "success": 0.0,
+        "cost": 7.3315
+      },
+      {
+        "seed": 32,
+        "success": 0.0,
+        "cost": 7.8093
+      },
+      {
+        "seed": 33,
+        "success": 0.0,
+        "cost": 7.7854
+      }
+    ],
+    "k": 4,
+    "n": 20
+  },
+  "CONTINUE_v27_altchain_full_60": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 2.6495
+      },
+      {
+        "seed": 2,
+        "success": 0.0,
+        "cost": 1.9137
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 2.612
+      },
+      {
+        "seed": 4,
+        "success": 0.0,
+        "cost": 2.1788
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 2.6545
+      },
+      {
+        "seed": 6,
+        "success": 0.0,
+        "cost": 2.4998
+      },
+      {
+        "seed": 7,
+        "success": 1.0,
+        "cost": 2.6221
+      },
+      {
+        "seed": 8,
+        "success": 0.0,
+        "cost": 1.8207
+      },
+      {
+        "seed": 9,
+        "success": 1.0,
+        "cost": 2.4149
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 1.8577
+      }
+    ],
+    "k": 6,
+    "n": 10
+  },
+  "CONTINUE_v27_altchain_full_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 0.0,
+        "cost": 8.2239
+      },
+      {
+        "seed": 2,
+        "success": 0.0,
+        "cost": 8.1815
+      },
+      {
+        "seed": 3,
+        "success": 0.0,
+        "cost": 8.2899
+      },
+      {
+        "seed": 4,
+        "success": 0.0,
+        "cost": 3.5499
+      },
+      {
+        "seed": 5,
+        "success": 0.0,
+        "cost": 5.1689
+      },
+      {
+        "seed": 6,
+        "success": 0.0,
+        "cost": 7.8063
+      },
+      {
+        "seed": 7,
+        "success": 0.0,
+        "cost": 7.4395
+      },
+      {
+        "seed": 8,
+        "success": 0.0,
+        "cost": 2.252
+      },
+      {
+        "seed": 9,
+        "success": 0.0,
+        "cost": 2.7307
+      },
+      {
+        "seed": 10,
+        "success": 0.0,
+        "cost": 6.3303
+      }
+    ],
+    "k": 0,
+    "n": 10
+  },
+  "CONTINUE_v29_retrieval_60": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 0.0,
+        "cost": 0.9177
+      },
+      {
+        "seed": 2,
+        "success": 0.0,
+        "cost": 0.9193
+      },
+      {
+        "seed": 3,
+        "success": 0.0,
+        "cost": 0.8987
+      },
+      {
+        "seed": 4,
+        "success": 0.0,
+        "cost": 0.7042
+      },
+      {
+        "seed": 5,
+        "success": 0.0,
+        "cost": 0.9115
+      },
+      {
+        "seed": 6,
+        "success": 0.0,
+        "cost": 0.8834
+      },
+      {
+        "seed": 7,
+        "success": 0.0,
+        "cost": 0.8937
+      },
+      {
+        "seed": 8,
+        "success": 0.0,
+        "cost": 0.7077
+      },
+      {
+        "seed": 9,
+        "success": 0.0,
+        "cost": 0.7203
+      },
+      {
+        "seed": 10,
+        "success": 0.0,
+        "cost": 0.8616
+      }
+    ],
+    "k": 0,
+    "n": 10
+  },
+  "CONTINUE_v28_scratchpad_cached_120_n30ext": {
+    "cells": [
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 1.0792
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 1.1014
+      },
+      {
+        "seed": 6,
+        "success": 1.0,
+        "cost": 1.0807
+      },
+      {
+        "seed": 7,
+        "success": 1.0,
+        "cost": 1.0249
+      },
+      {
+        "seed": 8,
+        "success": 1.0,
+        "cost": 1.039
+      },
+      {
+        "seed": 9,
+        "success": 1.0,
+        "cost": 1.0122
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 1.0389
+      },
+      {
+        "seed": 11,
+        "success": 1.0,
+        "cost": 1.0122
+      },
+      {
+        "seed": 12,
+        "success": 1.0,
+        "cost": 1.0416
+      },
+      {
+        "seed": 13,
+        "success": 1.0,
+        "cost": 1.0082
+      },
+      {
+        "seed": 14,
+        "success": 0.0,
+        "cost": 0.5201
+      },
+      {
+        "seed": 15,
+        "success": 1.0,
+        "cost": 0.9733
+      },
+      {
+        "seed": 16,
+        "success": 1.0,
+        "cost": 1.0408
+      },
+      {
+        "seed": 17,
+        "success": 1.0,
+        "cost": 1.077
+      },
+      {
+        "seed": 18,
+        "success": 1.0,
+        "cost": 1.0055
+      },
+      {
+        "seed": 19,
+        "success": 0.0,
+        "cost": 1.0802
+      },
+      {
+        "seed": 20,
+        "success": 1.0,
+        "cost": 1.1301
+      },
+      {
+        "seed": 21,
+        "success": 1.0,
+        "cost": 1.0879
+      },
+      {
+        "seed": 22,
+        "success": 1.0,
+        "cost": 0.9975
+      },
+      {
+        "seed": 23,
+        "success": 1.0,
+        "cost": 1.1427
+      },
+      {
+        "seed": 24,
+        "success": 1.0,
+        "cost": 1.0586
+      },
+      {
+        "seed": 25,
+        "success": 0.0,
+        "cost": 1.1366
+      },
+      {
+        "seed": 26,
+        "success": 0.0,
+        "cost": 1.0778
+      },
+      {
+        "seed": 27,
+        "success": 1.0,
+        "cost": 1.0948
+      },
+      {
+        "seed": 28,
+        "success": 1.0,
+        "cost": 1.0507
+      },
+      {
+        "seed": 29,
+        "success": 1.0,
+        "cost": 1.0365
+      },
+      {
+        "seed": 30,
+        "success": 1.0,
+        "cost": 1.0194
+      },
+      {
+        "seed": 31,
+        "success": 1.0,
+        "cost": 1.0554
+      },
+      {
+        "seed": 32,
+        "success": 1.0,
+        "cost": 1.011
+      },
+      {
+        "seed": 33,
+        "success": 1.0,
+        "cost": 1.0505
+      }
+    ],
+    "k": 26,
+    "n": 30
+  },
+  "CONTINUE_v30_full_tally_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 14.4681
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 15.1028
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 14.675
+      },
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 14.9611
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 14.6369
+      },
+      {
+        "seed": 6,
+        "success": 1.0,
+        "cost": 15.7576
+      },
+      {
+        "seed": 7,
+        "success": 1.0,
+        "cost": 14.0195
+      },
+      {
+        "seed": 8,
+        "success": 1.0,
+        "cost": 15.195
+      },
+      {
+        "seed": 9,
+        "success": 1.0,
+        "cost": 15.2195
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 14.7337
+      }
+    ],
+    "k": 10,
+    "n": 10
+  },
+  "CONTINUE_v29_retrieval_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 0.0,
+        "cost": 1.6671
+      },
+      {
+        "seed": 2,
+        "success": 0.0,
+        "cost": 1.5865
+      },
+      {
+        "seed": 3,
+        "success": 0.10833333333333334,
+        "cost": 1.4019
+      },
+      {
+        "seed": 4,
+        "success": 0.0,
+        "cost": 1.5353
+      },
+      {
+        "seed": 5,
+        "success": 0.0,
+        "cost": 1.4673
+      },
+      {
+        "seed": 6,
+        "success": 0.0,
+        "cost": 1.5878
+      },
+      {
+        "seed": 7,
+        "success": 0.0,
+        "cost": 1.5971
+      },
+      {
+        "seed": 8,
+        "success": 0.0,
+        "cost": 1.4157
+      },
+      {
+        "seed": 9,
+        "success": 0.0,
+        "cost": 1.4087
+      },
+      {
+        "seed": 10,
+        "success": 0.0,
+        "cost": 1.5403
+      }
+    ],
+    "k": 0,
+    "n": 10
+  },
+  "CONTINUE_v30_trace_cached_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 1.743
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 1.7417
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 1.8032
+      }
+    ],
+    "k": 3,
+    "n": 3
+  },
+  "CONTINUE_v28_summary_uncapped_30": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 0.0,
+        "cost": 0.2647,
+        "summarizer_cost": 0.1527
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 0.2721,
+        "summarizer_cost": 0.1743
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 0.2678,
+        "summarizer_cost": 0.1653
+      },
+      {
+        "seed": 4,
+        "success": 0.0,
+        "cost": 0.287,
+        "summarizer_cost": 0.1679
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 0.2596,
+        "summarizer_cost": 0.1548
+      }
+    ],
+    "k": 3,
+    "n": 5
+  },
+  "CONTINUE_v28_summary_uncapped_60": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 0.6224,
+        "summarizer_cost": 0.4091
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 0.6471,
+        "summarizer_cost": 0.4365
+      },
+      {
+        "seed": 3,
+        "success": 0.0,
+        "cost": 0.6477,
+        "summarizer_cost": 0.4359
+      },
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 0.6544,
+        "summarizer_cost": 0.4199
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 0.6285,
+        "summarizer_cost": 0.4161
+      }
+    ],
+    "k": 4,
+    "n": 5
+  },
+  "CONTINUE_v31_summary_uncapped_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 0.0,
+        "cost": 1.5738,
+        "summarizer_cost": 1.2093
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 1.6711,
+        "summarizer_cost": 1.2733
+      },
+      {
+        "seed": 3,
+        "success": 0.0,
+        "cost": 1.6477,
+        "summarizer_cost": 1.2954
+      },
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 1.6757,
+        "summarizer_cost": 1.3098
+      },
+      {
+        "seed": 5,
+        "success": 0.0,
+        "cost": 1.8035,
+        "summarizer_cost": 1.4239
+      }
+    ],
+    "k": 2,
+    "n": 5
+  },
+  "CONTINUE_v32_alt_scratchpad_60": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 0.4272
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 0.4087
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 0.4051
+      },
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 0.4625
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 0.3951
+      }
+    ],
+    "k": 5,
+    "n": 5
+  },
+  "CONTINUE_v32_alt_scratchpad_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 1.0839
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 1.0941
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 1.1652
+      },
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 1.2126
+      },
+      {
+        "seed": 5,
+        "success": 0.0,
+        "cost": 1.1886
+      }
+    ],
+    "k": 4,
+    "n": 5
+  },
+  "CONTINUE_v33_convfull_120_n10ext": {
+    "cells": [
+      {
+        "seed": 4,
+        "success": 0.0,
+        "cost": 0.967
+      },
+      {
+        "seed": 5,
+        "success": 0.0,
+        "cost": 1.0461
+      },
+      {
+        "seed": 6,
+        "success": 0.0,
+        "cost": 1.0361
+      },
+      {
+        "seed": 7,
+        "success": 0.0,
+        "cost": 1.0828
+      },
+      {
+        "seed": 8,
+        "success": 0.0,
+        "cost": 1.0154
+      },
+      {
+        "seed": 9,
+        "success": 0.0,
+        "cost": 1.1047
+      },
+      {
+        "seed": 10,
+        "success": 0.0,
+        "cost": 1.0583
+      }
+    ],
+    "k": 0,
+    "n": 7
+  },
+  "COMPREHEND_v1_transcript_CIs": {
+    "sonnet": {
+      "raw": {
+        "mean": 0.511,
+        "lo": 0.422,
+        "hi": 0.607
+      },
+      "flatlog": {
+        "mean": 0.604,
+        "lo": 0.524,
+        "hi": 0.682
+      },
+      "view": {
+        "mean": 0.858,
+        "lo": 0.775,
+        "hi": 0.931
+      }
+    },
+    "haiku": {
+      "raw": {
+        "mean": 0.461,
+        "lo": 0.385,
+        "hi": 0.535
+      },
+      "flatlog": {
+        "mean": 0.573,
+        "lo": 0.515,
+        "hi": 0.633
+      },
+      "view": {
+        "mean": 0.808,
+        "lo": 0.74,
+        "hi": 0.875
+      }
+    }
+  },
+  "COMPREHEND_real_vs_synth_dist": {
+    "real": {
+      "mb": "med      11.0  [2.6 .. 24.2]",
+      "events": "med     935.5  [289.0 .. 4883.0]",
+      "tools": "med     220.0  [52.0 .. 957.0]",
+      "errors": "med       0.5  [0.0 .. 13.0]",
+      "files": "med       0.0  [0.0 .. 0.0]"
+    },
+    "synth": {
+      "mb": "med       1.1  [0.5 .. 1.3]",
+      "events": "med     391.0  [176.0 .. 487.0]",
+      "tools": "med     180.0  [80.0 .. 226.0]",
+      "errors": "med       0.0  [0.0 .. 0.0]",
+      "files": "med       0.0  [0.0 .. 0.0]"
+    },
+    "kind_shares": {
+      "tool_call": [
+        0.1887,
+        0.4607
+      ],
+      "thinking": [
+        0.15,
+        0.0
+      ],
+      "error": [
+        0.0014,
+        0.0
+      ],
+      "session_meta": [
+        0.3281,
+        0.0
+      ],
+      "tool_result": [
+        0.1886,
+        0.4579
+      ],
+      "message": [
+        0.0987,
+        0.0813
+      ],
+      "attachment": [
+        0.0445,
+        0.0
+      ]
+    }
+  },
+  "CONTINUE_v32_alt_scratchpad_120_n10ext": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 1.0839
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 1.0941
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 1.1652
+      },
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 1.2126
+      },
+      {
+        "seed": 5,
+        "success": 0.0,
+        "cost": 1.1886
+      },
+      {
+        "seed": 6,
+        "success": 1.0,
+        "cost": 1.1727
+      },
+      {
+        "seed": 7,
+        "success": 1.0,
+        "cost": 1.0581
+      },
+      {
+        "seed": 8,
+        "success": 1.0,
+        "cost": 1.1299
+      },
+      {
+        "seed": 9,
+        "success": 1.0,
+        "cost": 1.0909
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 1.2191
+      }
+    ],
+    "k": 9,
+    "n": 10
+  },
+  "CONTINUE_120_paired_per_seed": {
+    "note": "paired per-seed outcomes, curated (trace) vs full @120, 30 shared seeds; sources: v12 seeds 1-3 (curated 3/3) + v10 full seeds 1-3 (seed 2 only) + v23 seeds 4-6,10-13 + v26 ext seeds 14-33",
+    "curated_only": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      10,
+      12,
+      14,
+      16,
+      18,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      30,
+      32
+    ],
+    "full_only": [
+      11
+    ],
+    "both": 6,
+    "neither": 4,
+    "mcnemar_exact_two_sided_p": 4.01e-05
+  },
+  "COMPREHEND_toolcall_correlation": {
+    "matched": 3669,
+    "calls": 3671,
+    "rate": 0.9995
+  },
+  "CONTINUE_v31_summary_uncapped_120_n10ext": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 0.0,
+        "cost": 1.5738,
+        "summarizer_cost": 1.2093
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 1.6711,
+        "summarizer_cost": 1.2733
+      },
+      {
+        "seed": 3,
+        "success": 0.0,
+        "cost": 1.6477,
+        "summarizer_cost": 1.2954
+      },
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 1.6757,
+        "summarizer_cost": 1.3098
+      },
+      {
+        "seed": 5,
+        "success": 0.0,
+        "cost": 1.8035,
+        "summarizer_cost": 1.4239
+      },
+      {
+        "seed": 6,
+        "success": 0.0,
+        "cost": 1.768,
+        "summarizer_cost": 1.3924
+      },
+      {
+        "seed": 7,
+        "success": 0.0,
+        "cost": 1.6715,
+        "summarizer_cost": 1.3058
+      },
+      {
+        "seed": 8,
+        "success": 0.0,
+        "cost": 1.2918,
+        "summarizer_cost": 0.8543
+      },
+      {
+        "seed": 9,
+        "success": 0.0,
+        "cost": 1.3573,
+        "summarizer_cost": 0.9301
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 1.672,
+        "summarizer_cost": 1.2875
+      }
+    ],
+    "k": 3,
+    "n": 10
+  },
+  "CONTINUE_v35_maskscratch_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 2.9802
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 3.0062
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 2.7121
+      },
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 2.8363
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 3.265
+      },
+      {
+        "seed": 6,
+        "success": 1.0,
+        "cost": 3.204
+      },
+      {
+        "seed": 7,
+        "success": 1.0,
+        "cost": 2.8818
+      },
+      {
+        "seed": 8,
+        "success": 1.0,
+        "cost": 3.0051
+      },
+      {
+        "seed": 9,
+        "success": 1.0,
+        "cost": 2.9851
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 2.9634
+      }
+    ],
+    "k": 10,
+    "n": 10,
+    "note": "masked-history + scratchpad-note hybrid (GPT r5 #12): observations elided beyond last 5, action JSONs with notes persist"
+  },
+  "CONTINUE_v38_covstamp_120": {
+    "cells": [
+      {
+        "seed": 11,
+        "group": "fail",
+        "success": 1.0,
+        "cost": 1.5838
+      },
+      {
+        "seed": 20,
+        "group": "fail",
+        "success": 1.0,
+        "cost": 1.8167
+      },
+      {
+        "seed": 29,
+        "group": "fail",
+        "success": 1.0,
+        "cost": 1.8072
+      },
+      {
+        "seed": 31,
+        "group": "fail",
+        "success": 1.0,
+        "cost": 1.7484
+      },
+      {
+        "seed": 33,
+        "group": "fail",
+        "success": 1.0,
+        "cost": 1.7533
+      },
+      {
+        "seed": 14,
+        "group": "pass",
+        "success": 1.0,
+        "cost": 1.71
+      },
+      {
+        "seed": 15,
+        "group": "pass",
+        "success": 1.0,
+        "cost": 1.7187
+      },
+      {
+        "seed": 16,
+        "group": "pass",
+        "success": 1.0,
+        "cost": 1.7722
+      },
+      {
+        "seed": 17,
+        "group": "pass",
+        "success": 1.0,
+        "cost": 1.8467
+      },
+      {
+        "seed": 18,
+        "group": "pass",
+        "success": 1.0,
+        "cost": 1.6654
+      }
+    ],
+    "k_fail_seeds": 5,
+    "k_pass_seeds": 5,
+    "note": "req-candidate 11 (coverage stamp on aggregates) implemented post-eval; rerun on 5 pre-stamp failing seeds + 5 passing controls, cached curated @120"
+  },
+  "CONTINUE_v36_noerr_trace_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 1.6278
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 1.6222
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 1.5892
+      },
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 1.5897
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 1.5773
+      }
+    ],
+    "k": 5,
+    "n": 5,
+    "note": "no-error-injection replication (GPT r6 #7)"
+  },
+  "CONTINUE_v36_noerr_full_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 0.0,
+        "cost": 6.0629
+      },
+      {
+        "seed": 2,
+        "success": 0.0,
+        "cost": 8.2084
+      },
+      {
+        "seed": 3,
+        "success": 0.0,
+        "cost": 8.2042
+      },
+      {
+        "seed": 4,
+        "success": 0.0,
+        "cost": 5.8682
+      },
+      {
+        "seed": 5,
+        "success": 0.0,
+        "cost": 5.7907
+      }
+    ],
+    "k": 0,
+    "n": 5,
+    "note": "no-error-injection replication (GPT r6 #7)"
+  },
+  "CONTINUE_v37_tunedregex_prose_60": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 0.6295
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 0.6285
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 0.6304
+      }
+    ],
+    "k": 3,
+    "n": 3,
+    "note": "tuned per-format regex extractor on prose-chain (GPT r6 #15): the $0 ceiling of per-format engineering"
+  },
+  "CONTINUE_v39_view_plus_full_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 7.3291
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 7.6454
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 7.5145
+      },
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 7.728
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 7.6212
+      },
+      {
+        "seed": 6,
+        "success": 1.0,
+        "cost": 7.8702
+      },
+      {
+        "seed": 7,
+        "success": 1.0,
+        "cost": 7.5153
+      },
+      {
+        "seed": 8,
+        "success": 1.0,
+        "cost": 7.8867
+      },
+      {
+        "seed": 9,
+        "success": 1.0,
+        "cost": 7.4672
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 7.7416
+      }
+    ],
+    "k": 10,
+    "n": 10,
+    "note": "deconfound arm A: compiled view (post-stamp) + FULL raw history - computation equal, boundedness varied"
+  },
+  "CONTINUE_v39_view_noagg_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 0.8083333333333333,
+        "cost": 1.5272
+      },
+      {
+        "seed": 2,
+        "success": 0.0,
+        "cost": 2.2066
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 2.2835
+      },
+      {
+        "seed": 4,
+        "success": 0.0,
+        "cost": 2.2846
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 2.3031
+      },
+      {
+        "seed": 6,
+        "success": 0.0,
+        "cost": 2.4343
+      },
+      {
+        "seed": 7,
+        "success": 1.0,
+        "cost": 2.2106
+      },
+      {
+        "seed": 8,
+        "success": 0.0,
+        "cost": 2.3094
+      },
+      {
+        "seed": 9,
+        "success": 0.775,
+        "cost": 1.4865
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 2.3975
+      }
+    ],
+    "k": 4,
+    "n": 10,
+    "note": "deconfound arm B: bounded curated view, aggregates stripped, MAX_FACTS=1000 so all values stay in view - worker does ALL arithmetic"
+  },
+  "CONTINUE_v40_poststamp_n30_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 1.7129
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 1.7757
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 1.8721
+      },
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 1.8311
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 1.7988
+      },
+      {
+        "seed": 6,
+        "success": 1.0,
+        "cost": 1.7395
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 1.7723
+      },
+      {
+        "seed": 11,
+        "success": 1.0,
+        "cost": 1.6965
+      },
+      {
+        "seed": 12,
+        "success": 1.0,
+        "cost": 1.7664
+      },
+      {
+        "seed": 13,
+        "success": 1.0,
+        "cost": 1.8083
+      },
+      {
+        "seed": 14,
+        "success": 1.0,
+        "cost": 1.7708
+      },
+      {
+        "seed": 15,
+        "success": 1.0,
+        "cost": 1.678
+      },
+      {
+        "seed": 16,
+        "success": 1.0,
+        "cost": 1.748
+      },
+      {
+        "seed": 17,
+        "success": 1.0,
+        "cost": 1.8686
+      },
+      {
+        "seed": 18,
+        "success": 1.0,
+        "cost": 1.7094
+      },
+      {
+        "seed": 19,
+        "success": 1.0,
+        "cost": 1.8308
+      },
+      {
+        "seed": 20,
+        "success": 1.0,
+        "cost": 1.803
+      },
+      {
+        "seed": 21,
+        "success": 1.0,
+        "cost": 1.9119
+      },
+      {
+        "seed": 22,
+        "success": 1.0,
+        "cost": 1.7542
+      },
+      {
+        "seed": 23,
+        "success": 1.0,
+        "cost": 1.7847
+      },
+      {
+        "seed": 24,
+        "success": 1.0,
+        "cost": 1.7468
+      },
+      {
+        "seed": 25,
+        "success": 1.0,
+        "cost": 1.77
+      },
+      {
+        "seed": 26,
+        "success": 1.0,
+        "cost": 1.7557
+      },
+      {
+        "seed": 27,
+        "success": 1.0,
+        "cost": 1.7661
+      },
+      {
+        "seed": 28,
+        "success": 1.0,
+        "cost": 1.818
+      },
+      {
+        "seed": 29,
+        "success": 1.0,
+        "cost": 1.7072
+      },
+      {
+        "seed": 30,
+        "success": 1.0,
+        "cost": 1.6972
+      },
+      {
+        "seed": 31,
+        "success": 1.0,
+        "cost": 1.643
+      },
+      {
+        "seed": 32,
+        "success": 0.0,
+        "cost": 1.7345
+      },
+      {
+        "seed": 33,
+        "success": 1.0,
+        "cost": 1.7941
+      }
+    ],
+    "k": 29,
+    "n": 30,
+    "note": "clean n=30 grid on the shipped post-stamp renderer, same 30 seeds as the pooled pre-stamp headline (Opus r10 fix-2)"
+  },
+  "CONTINUE_v40b_minimal_tally_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 0.6589
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 0.6689
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 0.6626
+      },
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 0.6741
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 0.6666
+      },
+      {
+        "seed": 6,
+        "success": 1.0,
+        "cost": 0.6831
+      },
+      {
+        "seed": 7,
+        "success": 1.0,
+        "cost": 0.665
+      },
+      {
+        "seed": 8,
+        "success": 1.0,
+        "cost": 0.6759
+      },
+      {
+        "seed": 9,
+        "success": 1.0,
+        "cost": 0.6696
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 0.6701
+      }
+    ],
+    "k": 10,
+    "n": 10,
+    "note": "minimal harness accumulator (GPT r10 #5): regex tally over own history + last-5 steps; no ledger/fold/view machinery"
+  },
+  "CONTINUE_120_paired_shipped_vs_full": {
+    "curated_only": 22,
+    "full_only": 0,
+    "both": 7,
+    "neither": 1,
+    "mcnemar_p": 4.768e-07,
+    "note": "v40 shipped post-stamp renderer vs pooled full, same 30 seeds, same injected schedules"
+  },
+  "CONTINUE_v41_noerr_shipped_trace_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 1.6796
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 1.5608
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 1.5605
+      },
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 1.696
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 1.5256
+      },
+      {
+        "seed": 6,
+        "success": 1.0,
+        "cost": 1.5371
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 1.4695
+      },
+      {
+        "seed": 11,
+        "success": 1.0,
+        "cost": 1.4796
+      },
+      {
+        "seed": 12,
+        "success": 1.0,
+        "cost": 1.6073
+      },
+      {
+        "seed": 13,
+        "success": 1.0,
+        "cost": 1.5493
+      },
+      {
+        "seed": 14,
+        "success": 1.0,
+        "cost": 1.6494
+      },
+      {
+        "seed": 15,
+        "success": 1.0,
+        "cost": 1.5329
+      },
+      {
+        "seed": 16,
+        "success": 1.0,
+        "cost": 1.6647
+      },
+      {
+        "seed": 17,
+        "success": 1.0,
+        "cost": 1.6667
+      },
+      {
+        "seed": 18,
+        "success": 1.0,
+        "cost": 1.5378
+      },
+      {
+        "seed": 19,
+        "success": 1.0,
+        "cost": 1.5348
+      },
+      {
+        "seed": 20,
+        "success": 1.0,
+        "cost": 1.5777
+      },
+      {
+        "seed": 21,
+        "success": 1.0,
+        "cost": 1.6521
+      },
+      {
+        "seed": 22,
+        "success": 1.0,
+        "cost": 1.6553
+      },
+      {
+        "seed": 23,
+        "success": 1.0,
+        "cost": 1.6523
+      },
+      {
+        "seed": 24,
+        "success": 1.0,
+        "cost": 1.5696
+      },
+      {
+        "seed": 25,
+        "success": 1.0,
+        "cost": 1.5812
+      },
+      {
+        "seed": 26,
+        "success": 1.0,
+        "cost": 1.589
+      },
+      {
+        "seed": 27,
+        "success": 1.0,
+        "cost": 1.558
+      },
+      {
+        "seed": 28,
+        "success": 1.0,
+        "cost": 1.5286
+      },
+      {
+        "seed": 29,
+        "success": 1.0,
+        "cost": 1.6921
+      },
+      {
+        "seed": 30,
+        "success": 1.0,
+        "cost": 1.5479
+      },
+      {
+        "seed": 31,
+        "success": 1.0,
+        "cost": 1.5345
+      },
+      {
+        "seed": 32,
+        "success": 1.0,
+        "cost": 1.6637
+      },
+      {
+        "seed": 33,
+        "success": 1.0,
+        "cost": 1.5434
+      }
+    ],
+    "k": 30,
+    "n": 30,
+    "note": "definitive cell (r11 consensus): shipped post-stamp renderer, no error injection, n=30, same 30 seeds both arms"
+  },
+  "CONTINUE_v41_noerr_shipped_full_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 0.0,
+        "cost": 5.9721
+      },
+      {
+        "seed": 2,
+        "success": 0.0,
+        "cost": 5.8469
+      },
+      {
+        "seed": 3,
+        "success": 0.9916666666666667,
+        "cost": 8.197
+      },
+      {
+        "seed": 4,
+        "success": 0.0,
+        "cost": 8.286
+      },
+      {
+        "seed": 5,
+        "success": 0.0,
+        "cost": 8.2187
+      },
+      {
+        "seed": 6,
+        "success": 1.0,
+        "cost": 6.6004
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 5.9014
+      },
+      {
+        "seed": 11,
+        "success": 1.0,
+        "cost": 5.9407
+      },
+      {
+        "seed": 12,
+        "success": 0.0,
+        "cost": 6.3362
+      },
+      {
+        "seed": 13,
+        "success": 1.0,
+        "cost": 6.1318
+      },
+      {
+        "seed": 14,
+        "success": 0.0,
+        "cost": 6.4496
+      },
+      {
+        "seed": 15,
+        "success": 1.0,
+        "cost": 8.2386
+      },
+      {
+        "seed": 16,
+        "success": 0.0,
+        "cost": 6.68
+      },
+      {
+        "seed": 17,
+        "success": 1.0,
+        "cost": 5.9437
+      },
+      {
+        "seed": 18,
+        "success": 0.0,
+        "cost": 8.3953
+      },
+      {
+        "seed": 19,
+        "success": 0.0,
+        "cost": 8.2727
+      },
+      {
+        "seed": 20,
+        "success": 0.0,
+        "cost": 8.3199
+      },
+      {
+        "seed": 21,
+        "success": 0.0,
+        "cost": 5.9269
+      },
+      {
+        "seed": 22,
+        "success": 0.0,
+        "cost": 5.8303
+      },
+      {
+        "seed": 23,
+        "success": 0.0,
+        "cost": 6.4965
+      },
+      {
+        "seed": 24,
+        "success": 0.0,
+        "cost": 8.2765
+      },
+      {
+        "seed": 25,
+        "success": 0.0,
+        "cost": 8.2683
+      },
+      {
+        "seed": 26,
+        "success": 1.0,
+        "cost": 8.3531
+      },
+      {
+        "seed": 27,
+        "success": 1.0,
+        "cost": 6.0311
+      },
+      {
+        "seed": 28,
+        "success": 0.0,
+        "cost": 5.8651
+      },
+      {
+        "seed": 29,
+        "success": 0.0,
+        "cost": 5.9223
+      },
+      {
+        "seed": 30,
+        "success": 0.0,
+        "cost": 8.3446
+      },
+      {
+        "seed": 31,
+        "success": 0.0,
+        "cost": 8.2447
+      },
+      {
+        "seed": 32,
+        "success": 0.0,
+        "cost": 8.2489
+      },
+      {
+        "seed": 33,
+        "success": 0.0,
+        "cost": 8.2187
+      }
+    ],
+    "k": 8,
+    "n": 30,
+    "note": "definitive cell (r11 consensus): shipped post-stamp renderer, no error injection, n=30, same 30 seeds both arms"
+  },
+  "CONTINUE_120_paired_v41_definitive": {
+    "curated": 30,
+    "full": 8,
+    "curated_only": 22,
+    "full_only": 0,
+    "mcnemar_p": 4.77e-07,
+    "mean_cost_curated": 1.59,
+    "mean_cost_full": 7.13,
+    "note": "v41: shipped renderer, no injection, n=30 both arms, same seeds - the confound-free powered cell"
+  },
+  "CONTINUE_v42_scratchpad_noerr_120": {
+    "cells": [
+      {
+        "seed": 1,
+        "success": 1.0,
+        "cost": 0.9418
+      },
+      {
+        "seed": 2,
+        "success": 1.0,
+        "cost": 0.9713
+      },
+      {
+        "seed": 3,
+        "success": 1.0,
+        "cost": 0.9925
+      },
+      {
+        "seed": 4,
+        "success": 1.0,
+        "cost": 0.9908
+      },
+      {
+        "seed": 5,
+        "success": 1.0,
+        "cost": 0.9835
+      },
+      {
+        "seed": 6,
+        "success": 1.0,
+        "cost": 0.9982
+      },
+      {
+        "seed": 10,
+        "success": 1.0,
+        "cost": 1.0053
+      },
+      {
+        "seed": 11,
+        "success": 1.0,
+        "cost": 0.9526
+      },
+      {
+        "seed": 12,
+        "success": 1.0,
+        "cost": 0.9675
+      },
+      {
+        "seed": 13,
+        "success": 1.0,
+        "cost": 0.9344
+      },
+      {
+        "seed": 14,
+        "success": 1.0,
+        "cost": 0.966
+      },
+      {
+        "seed": 15,
+        "success": 1.0,
+        "cost": 1.051
+      },
+      {
+        "seed": 16,
+        "success": 1.0,
+        "cost": 0.9353
+      },
+      {
+        "seed": 17,
+        "success": 1.0,
+        "cost": 0.9716
+      },
+      {
+        "seed": 18,
+        "success": 1.0,
+        "cost": 0.9455
+      },
+      {
+        "seed": 19,
+        "success": 1.0,
+        "cost": 0.9924
+      },
+      {
+        "seed": 20,
+        "success": 1.0,
+        "cost": 0.9446
+      },
+      {
+        "seed": 21,
+        "success": 1.0,
+        "cost": 1.0041
+      },
+      {
+        "seed": 22,
+        "success": 1.0,
+        "cost": 0.9304
+      },
+      {
+        "seed": 23,
+        "success": 1.0,
+        "cost": 0.9941
+      },
+      {
+        "seed": 24,
+        "success": 1.0,
+        "cost": 0.9414
+      },
+      {
+        "seed": 25,
+        "success": 1.0,
+        "cost": 1.046
+      },
+      {
+        "seed": 26,
+        "success": 1.0,
+        "cost": 0.9326
+      },
+      {
+        "seed": 27,
+        "success": 1.0,
+        "cost": 0.9615
+      },
+      {
+        "seed": 28,
+        "success": 1.0,
+        "cost": 0.985
+      },
+      {
+        "seed": 29,
+        "success": 1.0,
+        "cost": 0.9419
+      },
+      {
+        "seed": 30,
+        "success": 1.0,
+        "cost": 0.9945
+      },
+      {
+        "seed": 31,
+        "success": 1.0,
+        "cost": 0.9907
+      },
+      {
+        "seed": 32,
+        "success": 1.0,
+        "cost": 0.9441
+      },
+      {
+        "seed": 33,
+        "success": 1.0,
+        "cost": 0.9775
+      }
+    ],
+    "k": 30,
+    "n": 30,
+    "note": "cached scratchpad under the definitive protocol (no injection, n=30, same seeds) - GPT r12 #5 matched-rival cell"
+  }
+}

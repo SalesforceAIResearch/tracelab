@@ -1,0 +1,12 @@
+{"arm": "full", "seed": 1, "success": 0.0, "steps": 80, "cost": 2.5469, "curator_cost": 0.0, "curator_calls": 0, "notes": ["total 2860 != 2838 (prefix match 0/60)"]}
+{"arm": "full", "seed": 2, "success": 1.0, "steps": 67, "cost": 1.7575, "curator_cost": 0.0, "curator_calls": 0, "notes": []}
+{"arm": "full", "seed": 3, "success": 0.0, "steps": 80, "cost": 2.5643, "curator_cost": 0.0, "curator_calls": 0, "notes": ["total 2756 != 3154 (prefix match 0/60)"]}
+{"arm": "trace-det", "seed": 1, "success": 0.0, "steps": 76, "cost": 0.5859, "curator_cost": 0.0, "curator_calls": 0, "notes": ["total 179 != 2838 (prefix match 0/60)"]}
+{"arm": "trace-det", "seed": 2, "success": 0.0, "steps": 80, "cost": 0.6292, "curator_cost": 0.0, "curator_calls": 0, "notes": ["no total= line in total.txt"]}
+{"arm": "trace-det", "seed": 3, "success": 0.0, "steps": 80, "cost": 0.632, "curator_cost": 0.0, "curator_calls": 0, "notes": ["no total= line in total.txt"]}
+{"arm": "trace-haiku", "seed": 1, "success": 1.0, "steps": 67, "cost": 0.8012, "curator_cost": 0.0225, "curator_calls": 13, "notes": []}
+{"arm": "trace-haiku", "seed": 2, "success": 1.0, "steps": 67, "cost": 0.8162, "curator_cost": 0.0225, "curator_calls": 13, "notes": []}
+{"arm": "trace-haiku", "seed": 3, "success": 0.0, "steps": 80, "cost": 1.0869, "curator_cost": 0.0275, "curator_calls": 16, "notes": ["total 3214 != 3154 (prefix match 0/60)"]}
+{"arm": "trace-sonnet", "seed": 1, "success": 0.0, "steps": 80, "cost": 0.7629, "curator_cost": 0.0698, "curator_calls": 16, "notes": ["no total= line in total.txt"]}
+{"arm": "trace-sonnet", "seed": 2, "success": 0.0, "steps": 80, "cost": 0.6479, "curator_cost": 0.0596, "curator_calls": 16, "notes": ["no total= line in total.txt"]}
+{"arm": "trace-sonnet", "seed": 3, "success": 0.0, "steps": 80, "cost": 0.7037, "curator_cost": 0.0696, "curator_calls": 16, "notes": ["total 675 != 3154 (prefix match 0/60)"]}

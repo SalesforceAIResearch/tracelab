@@ -1,0 +1,6 @@
+{"pol": "full", "seed": 1, "success": 0.0, "steps": 69, "input_tokens": 3164, "output_tokens": 4769, "cache_read": 499716, "cache_write": 39850, "cost": 0.3804, "retries": 4, "parse_failures": 1}
+{"pol": "full", "seed": 2, "success": 1.0, "steps": 69, "input_tokens": 2662, "output_tokens": 3780, "cache_read": 500396, "cache_write": 39257, "cost": 0.362, "retries": 4, "parse_failures": 2}
+{"pol": "full", "seed": 3, "success": 0.0, "steps": 69, "input_tokens": 2642, "output_tokens": 3907, "cache_read": 502275, "cache_write": 43627, "cost": 0.3808, "retries": 4, "parse_failures": 1}
+{"pol": "trace", "seed": 1, "success": 1.0, "steps": 74, "input_tokens": 3251, "output_tokens": 2891, "cache_read": 45688, "cache_write": 163693, "cost": 0.6807, "retries": 4, "parse_failures": 0}
+{"pol": "trace", "seed": 2, "success": 1.0, "steps": 72, "input_tokens": 2792, "output_tokens": 2803, "cache_read": 41710, "cache_write": 159642, "cost": 0.6616, "retries": 4, "parse_failures": 0}
+{"pol": "trace", "seed": 3, "success": 1.0, "steps": 71, "input_tokens": 3771, "output_tokens": 2834, "cache_read": 50347, "cache_write": 149687, "cost": 0.6303, "retries": 4, "parse_failures": 0}

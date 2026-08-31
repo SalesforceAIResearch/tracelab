@@ -1,0 +1,6 @@
+{"arm": "trace-haiku", "seed": 1, "success": 1.0, "steps": 67, "cost": 0.7749, "curator_cost": 0.0229, "known_keys": ["start_file", "delta", "next_file"], "notes": []}
+{"arm": "trace-haiku", "seed": 2, "success": 1.0, "steps": 67, "cost": 0.7885, "curator_cost": 0.0231, "known_keys": ["current_file", "next_file", "delta"], "notes": []}
+{"arm": "trace-haiku", "seed": 3, "success": 1.0, "steps": 67, "cost": 0.7789, "curator_cost": 0.0233, "known_keys": ["start_file", "delta", "next_file"], "notes": []}
+{"arm": "trace-sonnet", "seed": 1, "success": 0.0, "steps": 80, "cost": 0.636, "curator_cost": 0.0755, "known_keys": ["delta", "next_file"], "notes": ["no total= line in total.txt"]}
+{"arm": "trace-sonnet", "seed": 2, "success": 0.0, "steps": 80, "cost": 0.645, "curator_cost": 0.0656, "known_keys": ["start_file", "delta", "next_file"], "notes": ["no total= line in total.txt"]}
+{"arm": "trace-sonnet", "seed": 3, "success": 0.0, "steps": 74, "cost": 0.5833, "curator_cost": 0.0573, "known_keys": ["delta", "next_file"], "notes": ["total 481 != 3154 (prefix match 0/60)"]}

@@ -1,0 +1,3 @@
+{"seed": 1, "success": 0.0, "steps": 67, "cost": 0.7667, "curator_cost": 0.2209, "curator_calls": 75, "refusals": 35, "notes": ["total 2691 != 2838 (prefix match 0/60)"]}
+{"seed": 2, "success": 1.0, "steps": 67, "cost": 0.7734, "curator_cost": 0.2427, "curator_calls": 85, "refusals": 37, "notes": []}
+{"seed": 3, "success": 0.0, "steps": 67, "cost": 0.7537, "curator_cost": 0.2421, "curator_calls": 85, "refusals": 40, "notes": ["total 2982 != 3154 (prefix match 0/60)"]}

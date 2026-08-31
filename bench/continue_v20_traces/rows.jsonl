@@ -1,0 +1,6 @@
+{"links": 30, "seed": 1, "success": 0.0, "steps": 45, "cost": 0.3206, "summarizer_cost": 0.1578, "notes": ["no total= line in total.txt"]}
+{"links": 30, "seed": 2, "success": 0.0, "steps": 35, "cost": 0.2348, "summarizer_cost": 0.1135, "notes": ["total 1482 != 1481 (prefix match 0/30)"]}
+{"links": 30, "seed": 3, "success": 0.0, "steps": 45, "cost": 0.3129, "summarizer_cost": 0.158, "notes": ["no total= line in total.txt"]}
+{"links": 60, "seed": 1, "success": 0.0, "steps": 68, "cost": 0.4985, "summarizer_cost": 0.2329, "notes": ["total 2668 != 2838 (prefix match 0/60)"]}
+{"links": 60, "seed": 2, "success": 0.0, "steps": 80, "cost": 0.5761, "summarizer_cost": 0.2876, "notes": ["no total= line in total.txt"]}
+{"links": 60, "seed": 3, "success": 0.0, "steps": 80, "cost": 0.586, "summarizer_cost": 0.288, "notes": ["no total= line in total.txt"]}
