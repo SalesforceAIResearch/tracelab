@@ -2,7 +2,7 @@
 
 Reference implementation and benchmarks for the paper **"Parsing the Stream: A Live
 Trace Model for Long-Horizon Agents and Their Observers"** (Egor Pakhomov, Erik
-Nijkamp — Salesforce AI Research). arXiv link: TBA-on-announcement.
+Nijkamp — Salesforce AI Research). arXiv: https://arxiv.org/abs/2609.01466
 
 A long-horizon agent run produces one artifact — its trace — and two consumers of it:
 the human observer and the agent itself. tracelab parses the stream once into an
@@ -48,7 +48,7 @@ endpoints while they remain served.
 @article{pakhomov2026parsing,
   title={Parsing the Stream: A Live Trace Model for Long-Horizon Agents and Their Observers},
   author={Pakhomov, Egor and Nijkamp, Erik},
-  journal={arXiv preprint arXiv:TBA},
+  journal={arXiv preprint arXiv:2609.01466},
   year={2026}
 }
 ```
