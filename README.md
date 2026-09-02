@@ -4,6 +4,10 @@ Reference implementation and benchmarks for the paper **"Parsing the Stream: A L
 Trace Model for Long-Horizon Agents and Their Observers"** (Egor Pakhomov, Erik
 Nijkamp — Salesforce AI Research). arXiv: https://arxiv.org/abs/2609.01466
 
+- 📄 Paper: https://arxiv.org/abs/2609.01466
+- 🤗 Dataset (COMPREHEND synthetic corpus, CC-BY-4.0): https://huggingface.co/datasets/Salesforce/tracelab-comprehend
+- 💻 Code: this repository (BSD-3-Clause)
+
 A long-horizon agent run produces one artifact — its trace — and two consumers of it:
 the human observer and the agent itself. tracelab parses the stream once into an
 append-only typed ledger, folds it into deterministic run state, and compiles
@@ -23,7 +27,7 @@ agent by a curator loop.
 - `bench/spend.json` — the complete per-call spend ledger for every LLM call.
 - `bench/continue_v*_traces/` — all recorded CONTINUE workbench run traces (synthetic tasks; variant numbering follows the scoreboard's run keys).
 - `bench/synth_corpus/` — the released COMPREHEND corpus: twelve seeded synthetic
-  sessions; regenerates byte-identically via
+  sessions (also hosted at https://huggingface.co/datasets/Salesforce/tracelab-comprehend); regenerates byte-identically via
   `uv run python -m tracelab.bench.synth_corpus --seeds 201-212 --out out/`.
 
 Real-corpus modes of FIDELITY/COMPREHEND read the runner's own local Claude Code transcripts (`~/.claude/projects`); nothing is uploaded anywhere by the harness itself beyond the configured model calls. The twelve real transcripts used for the exploratory observer cells are withheld
